@@ -1,0 +1,6 @@
+{
+  "name": "Kitzch-Pop Halloween | Candy Catch Szn",
+  "description": "Kitzch-Pop Halloween Candy Catch! Catch delicious spooky sweets, activate moon magnets and sugar rush, dodge cursed orbs, and unwrap your mythic fortune drop.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
