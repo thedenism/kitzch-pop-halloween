@@ -2,6 +2,8 @@
 
 > A high-energy, retro-arcade browser game celebrating Halloween with Y2K scrap-sticker aesthetics, celesta soundscapes, and fortune wish drops. Inspired by the [Kitzch-Pop Halloween](https://kitzchpophallowen.oneapp.dev/) universe.
 
+🎮 **Play Live Online:** [https://thedenism.github.io/kitzch-pop-halloween/](https://thedenism.github.io/kitzch-pop-halloween/)
+
 ![Kitzch-Pop Halloween Banner](public/og-image.png)
 
 ## ✨ Game Features
