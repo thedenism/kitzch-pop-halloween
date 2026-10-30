@@ -1151,7 +1151,7 @@ export default function App() {
                 </button>
 
                 <a
-                  href="/kitzch-pop-halloween-game.zip"
+                  href="./kitzch-pop-halloween-game.zip"
                   download="kitzch-pop-halloween-game.zip"
                   className="btn-alt py-1.5 px-3 flex items-center gap-1.5 cursor-pointer text-[#FACE91] hover:text-white"
                   title="Download Source Code (.ZIP)"
@@ -1378,7 +1378,7 @@ export default function App() {
                 </div>
 
                 <a
-                  href="/kitzch-pop-halloween-game.zip"
+                  href="./kitzch-pop-halloween-game.zip"
                   download="kitzch-pop-halloween-game.zip"
                   className="btn-alt w-full text-xs flex items-center justify-center gap-1.5 py-2 cursor-pointer text-[#FACE91] hover:text-white mt-1"
                 >

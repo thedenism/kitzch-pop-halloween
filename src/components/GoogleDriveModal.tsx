@@ -288,7 +288,7 @@ export function GoogleDriveModal({ isOpen, onClose }: GoogleDriveModalProps) {
         <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-[#FACE91]/70 font-ui">
           <span>Ingin simpan ke perangkat lokal?</span>
           <a
-            href="/kitzch-pop-halloween-game.zip"
+            href="./kitzch-pop-halloween-game.zip"
             download="kitzch-pop-halloween-game.zip"
             className="flex items-center gap-1 text-emerald-400 hover:text-emerald-300 font-semibold cursor-pointer"
           >
