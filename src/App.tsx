@@ -22,7 +22,8 @@ import {
 import { GrimoireModal } from './components/GrimoireModal';
 import { SkinSelectorModal } from './components/SkinSelectorModal';
 import { GoogleDriveModal } from './components/GoogleDriveModal';
-import { BookOpen, Shirt, Volume2, VolumeX, Music, Share2, Check, Download, Cloud } from 'lucide-react';
+import { GitHubModal } from './components/GitHubModal';
+import { BookOpen, Shirt, Volume2, VolumeX, Music, Share2, Check, Download, Cloud, Github } from 'lucide-react';
 
 const STORAGE_KEY = 'kitzch_halloween_profile_v2';
 
@@ -88,6 +89,7 @@ export default function App() {
   const [showGrimoire, setShowGrimoire] = useState<boolean>(false);
   const [showWardrobe, setShowWardrobe] = useState<boolean>(false);
   const [showDriveModal, setShowDriveModal] = useState<boolean>(false);
+  const [showGithubModal, setShowGithubModal] = useState<boolean>(false);
   const [toastMessage, setToastMessage] = useState<string>('');
 
   const handleShareGame = () => {
@@ -1139,6 +1141,15 @@ export default function App() {
                   <span>Google Drive</span>
                 </button>
 
+                <button
+                  onClick={() => setShowGithubModal(true)}
+                  className="btn-alt py-1.5 px-3 flex items-center gap-1.5 cursor-pointer text-white hover:text-white"
+                  title="Upload source code ke GitHub"
+                >
+                  <Github className="w-3.5 h-3.5 text-white" />
+                  <span>GitHub</span>
+                </button>
+
                 <a
                   href="/kitzch-pop-halloween-game.zip"
                   download="kitzch-pop-halloween-game.zip"
@@ -1198,14 +1209,25 @@ export default function App() {
                   </button>
                 </div>
 
-                <button
-                  onClick={() => setShowDriveModal(true)}
-                  className="btn-alt w-full py-2.5 px-4 flex items-center justify-center gap-2 cursor-pointer text-xs font-bold text-amber-300 hover:text-white border-amber-400/40 hover:border-amber-400 shadow-sm"
-                  title="Simpan file game dan source code langsung ke Google Drive Anda"
-                >
-                  <Cloud className="w-4 h-4 text-amber-400" />
-                  <span>Masukin Game ke Google Drive</span>
-                </button>
+                <div className="grid grid-cols-2 gap-2 w-full">
+                  <button
+                    onClick={() => setShowDriveModal(true)}
+                    className="btn-alt py-2.5 px-3 flex items-center justify-center gap-1.5 cursor-pointer text-xs font-bold text-amber-300 hover:text-white border-amber-400/40 hover:border-amber-400 shadow-sm"
+                    title="Simpan file game ke Google Drive Anda"
+                  >
+                    <Cloud className="w-4 h-4 text-amber-400" />
+                    <span>Google Drive</span>
+                  </button>
+
+                  <button
+                    onClick={() => setShowGithubModal(true)}
+                    className="btn-alt py-2.5 px-3 flex items-center justify-center gap-1.5 cursor-pointer text-xs font-bold text-white hover:text-white border-white/30 hover:border-white shadow-sm"
+                    title="Upload source code ke GitHub Anda"
+                  >
+                    <Github className="w-4 h-4 text-white" />
+                    <span>Upload GitHub</span>
+                  </button>
+                </div>
               </div>
 
               {/* Personal Record */}
@@ -1338,13 +1360,22 @@ export default function App() {
                   </button>
                 </div>
 
-                <button
-                  onClick={() => setShowDriveModal(true)}
-                  className="btn-alt w-full text-xs flex items-center justify-center gap-1.5 py-2 cursor-pointer text-amber-300 hover:text-white mt-1 border-amber-400/30"
-                >
-                  <Cloud className="w-3.5 h-3.5 text-amber-400" />
-                  <span>Simpan ke Google Drive</span>
-                </button>
+                <div className="grid grid-cols-2 gap-2 w-full mt-1">
+                  <button
+                    onClick={() => setShowDriveModal(true)}
+                    className="btn-alt text-xs flex items-center justify-center gap-1.5 py-2 cursor-pointer text-amber-300 hover:text-white border-amber-400/30"
+                  >
+                    <Cloud className="w-3.5 h-3.5 text-amber-400" />
+                    <span>Google Drive</span>
+                  </button>
+                  <button
+                    onClick={() => setShowGithubModal(true)}
+                    className="btn-alt text-xs flex items-center justify-center gap-1.5 py-2 cursor-pointer text-white hover:text-white border-white/20"
+                  >
+                    <Github className="w-3.5 h-3.5 text-white" />
+                    <span>GitHub</span>
+                  </button>
+                </div>
 
                 <a
                   href="/kitzch-pop-halloween-game.zip"
@@ -1462,13 +1493,22 @@ export default function App() {
                             <span>Bagikan</span>
                           </button>
                         </div>
-                        <button
-                          onClick={() => setShowDriveModal(true)}
-                          className="btn-alt w-full text-xs cursor-pointer flex items-center justify-center gap-1.5 py-2.5 text-amber-300 hover:text-white border-amber-400/30"
-                        >
-                          <Cloud className="w-3.5 h-3.5 text-amber-400" />
-                          <span>Masukin ke Google Drive</span>
-                        </button>
+                        <div className="grid grid-cols-2 gap-2 w-full">
+                          <button
+                            onClick={() => setShowDriveModal(true)}
+                            className="btn-alt text-xs cursor-pointer flex items-center justify-center gap-1.5 py-2.5 text-amber-300 hover:text-white border-amber-400/30"
+                          >
+                            <Cloud className="w-3.5 h-3.5 text-amber-400" />
+                            <span>Google Drive</span>
+                          </button>
+                          <button
+                            onClick={() => setShowGithubModal(true)}
+                            className="btn-alt text-xs cursor-pointer flex items-center justify-center gap-1.5 py-2.5 text-white hover:text-white border-white/20"
+                          >
+                            <Github className="w-3.5 h-3.5 text-white" />
+                            <span>GitHub</span>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   )
@@ -1506,6 +1546,12 @@ export default function App() {
       <GoogleDriveModal
         isOpen={showDriveModal}
         onClose={() => setShowDriveModal(false)}
+      />
+
+      {/* GitHub Modal */}
+      <GitHubModal
+        isOpen={showGithubModal}
+        onClose={() => setShowGithubModal(false)}
       />
 
       {/* Toast Notification for Sharing */}
